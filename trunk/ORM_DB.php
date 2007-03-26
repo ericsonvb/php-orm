@@ -2,12 +2,22 @@
 
 class ORM_DB
 {
-	var $conn = null;
+	static private $conn = null;
 
-	function __construct()
+	// Esta Variable contiene la configuracion de nuestra base de datos
+	// Debe ser redefinida
+	abstract protected $config = 	(
+			"server"=>"servidor.com",
+			"user"=>"root",
+			"pass"=>"clave",
+			"database"=>"mibasededatos",
+			"driver"=>"mysqlt"
+			);
+
+	private function __construct()
 	{
 		include_once("adodb.inc.php");
-		$conn = ADONewConnection('mysqlt');
+		$conn = ADONewConnection();
 		$conn->PConnect("serverip", "user", "pass", "database");
 		$this->conn = $conn;
 		$this->conn->debug=false;
@@ -15,9 +25,16 @@ class ORM_DB
 
 	}
 
-	function getConnection()
+	static function getConnection()
 	{
-		return $this->conn;
+		if ( self::$conn == null or self::$conn)
+		{
+			self::$conn = ADONewConnection(self::$config["driver"]);
+			self::$conn->PConnect(self::$config["server"],self::$config["user"],self::$config["pass"],self::$config["database"]);
+			self::$conn->debug = false;
+			self::$conn->SetFetchMode(ADODB_FETCH_ASSOC);
+		}
+		return self::$conn;
 	}
 }
 
