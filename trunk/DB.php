@@ -12,7 +12,7 @@ class DB
 		$this->conn = $conn;
 		$this->conn->debug=false;
 		$this->conn->SetFetchMode(ADODB_FETCH_ASSOC);
-	
+
 	}
 
 	function getConnection()
