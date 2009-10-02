@@ -5,9 +5,9 @@
 
 	include_once("ORMBase.php");
 
-	class Post extends ORMBase
+	class Boleto extends ORMBase
 	{
-		protected $tablename = "wp_posts";
+		protected $tablename = "boleto";
 
 		protected function __construct()
 		{
@@ -16,7 +16,7 @@
 
 		public function getConnectionParams()
 		{
-			return array("server"=>"localhost","database"=>"cumbaza","user"=>"root","password"=>"trujillo","driver"=>"mysql");
+			return array("server"=>"localhost","database"=>"transportes","user"=>"root","password"=>"","driver"=>"mysql");
 		}
 	}
 
