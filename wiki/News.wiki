@@ -1,5 +1,5 @@
-#summary One-sentence summary of this page.
 #labels 1.7,news
+= [http://blog.ncdcsolutions.com/index.php/2010/02/02/soporte-de-xml-en-phporm/ Soporte serializacion XML] =
 
 = Introduccion =
 
