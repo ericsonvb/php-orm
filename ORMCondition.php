@@ -2,8 +2,7 @@
 
 /**
 * Me permite definir condiciones logicas para las busquedas en la base de datos
-* author: necudeco@necudeco.com
-* web http://necudeco.com
+* author: ericsonvb@gmail.com
 */
 class ORMCondition 
 {
