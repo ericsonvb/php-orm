@@ -2,7 +2,7 @@
 /*
  *      ORMBase.php
  *      
- *      Copyright 2008 necudeco <necudeco@arthas>
+ *      Copyright 2008 ericsonvb <ericsonvb@gmail.com>
  *      
  *      This program is free software; you can redistribute it and/or modify
  *      it under the terms of the GNU General Public License as published by
